@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ed's Total Auto Solutions | Auto Body & Collision Repair in Brockton, MA</title>
+<meta name="description" content="Ed's Total Auto Solutions is Brockton, MA's auto body shop for collision repair, paint & refinishing, dent removal, and general auto repair. Call (508) 587-0709 for a free estimate.">
+<meta name="keywords" content="auto body shop Brockton MA, collision repair Brockton, auto paint shop, dent repair, Ed's Total Auto Solutions">
+<meta property="og:title" content="Ed's Total Auto Solutions | Auto Body Shop, Brockton MA">
+<meta property="og:description" content="Collision repair, paint, dent removal & general auto repair at 347 N Montello St, Brockton, MA.">
+<meta property="og:type" content="business.business">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoBodyShop",
+  "name": "Ed's Total Auto Solutions",
+  "telephone": "+1-508-587-0709",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "347 N Montello St",
+    "addressLocality": "Brockton",
+    "addressRegion": "MA",
+    "postalCode": "02301",
+    "addressCountry": "US"
+  }
+}
+</script>
+<style>
+/* ============================================
+   ED'S TOTAL AUTO SOLUTIONS — design tokens
+   ============================================ */
+:root{
+  --charcoal:  #1B1D21;
+  --charcoal-2:#24272C;
+  --paper:     #ECEDE7;
+  --paper-2:   #E2E4DC;
+  --orange:    #E8541E;
+  --orange-2:  #C4441A;
+  --steel:     #4A5560;
+  --chrome:    #C7CBC9;
+  --ink:       #14161A;
+  --ink-soft:  #4B4E52;
+
+  --display: 'Oswald', sans-serif;
+  --body:    'Work Sans', sans-serif;
+  --mono:    'IBM Plex Mono', monospace;
+
+  --stripe: repeating-linear-gradient(
+    -45deg,
+    var(--orange) 0px, var(--orange) 26px,
+    var(--charcoal) 26px, var(--charcoal) 52px
+  );
+
+  --maxw: 1180px;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+h1,h2,h3,h4{
+  font-family:var(--display);
+  text-transform:uppercase;
+  letter-spacing:0.02em;
+  margin:0 0 .5em;
+  color:var(--charcoal);
+  font-weight:600;
+}
+p{ margin:0 0 1em; color:var(--ink-soft); }
+.container{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+.eyebrow{
+  font-family:var(--mono);
+  font-size:.78rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--orange);
+  display:flex; align-items:center; gap:10px;
+  margin-bottom:14px;
+}
+.eyebrow::before{
+  content:"";
+  width:22px; height:2px;
+  background:var(--orange);
+  display:inline-block;
+}
+
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+  outline:3px solid var(--orange);
+  outline-offset:2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; }
+}
+
+/* NAV */
+.site-header{
+  position:sticky; top:0; z-index:100;
+  background:var(--charcoal);
+  border-bottom:4px solid var(--orange);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 24px;
+  max-width:var(--maxw); margin:0 auto;
+}
+.brand{
+  font-family:var(--display);
+  color:var(--paper);
+  font-size:1.25rem;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  display:flex; flex-direction:column; line-height:1.1;
+}
+.brand span{
+  font-family:var(--mono);
+  font-size:.62rem;
+  color:var(--chrome);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  margin-top:3px;
+}
+.nav-links{
+  display:flex; gap:6px; list-style:none; margin:0; padding:0;
+}
+.nav-links a{
+  color:var(--chrome);
+  font-family:var(--mono);
+  font-size:.82rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  padding:10px 14px;
+  border-bottom:2px solid transparent;
+  transition:color .2s ease, border-color .2s ease;
+}
+.nav-links a:hover, .nav-links a.active{
+  color:var(--orange);
+  border-color:var(--orange);
+}
+.nav-cta{
+  background:var(--orange);
+  color:var(--charcoal) !important;
+  font-weight:700;
+  border-radius:3px;
+}
+.nav-cta:hover{ background:var(--paper); color:var(--charcoal) !important; }
+.nav-toggle{
+  display:none;
+  background:none; border:1px solid var(--chrome); color:var(--paper);
+  padding:8px 10px; font-size:1.1rem; border-radius:3px;
+}
+
+@media (max-width:820px){
+  .nav-toggle{ display:block; }
+  .nav-links{
+    position:absolute; top:100%; left:0; right:0;
+    background:var(--charcoal);
+    flex-direction:column; gap:0;
+    max-height:0; overflow:hidden;
+    border-bottom:4px solid var(--orange);
+  }
+  .nav-links.open{ max-height:400px; }
+  .nav-links a{ padding:16px 24px; border-bottom:1px solid var(--charcoal-2); }
+}
+
+/* CAUTION STRIPE DIVIDER */
+.stripe{ height:14px; background:var(--stripe); }
+.stripe.thick{ height:22px; }
+
+/* HERO / WORK ORDER TICKET */
+.hero{ position:relative; background:var(--charcoal); color:var(--paper); overflow:hidden; }
+.hero-inner{
+  max-width:var(--maxw); margin:0 auto;
+  padding:64px 24px 56px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:end;
+  position:relative;
+  z-index:2;
+}
+@media (max-width:900px){ .hero-inner{ grid-template-columns:1fr; } }
+.hero h1{ color:var(--paper); font-size:clamp(2.4rem, 5.2vw, 4.2rem); line-height:.98; margin-bottom:.3em; }
+.hero h1 em{ font-style:normal; color:var(--orange); }
+.hero-sub{ color:var(--chrome); max-width:46ch; font-size:1.05rem; }
+.hero-cta-row{ display:flex; gap:14px; flex-wrap:wrap; margin-top:26px; }
+
+.btn{
+  font-family:var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-size:.85rem;
+  padding:14px 22px;
+  border-radius:3px;
+  border:2px solid var(--orange);
+  display:inline-flex; align-items:center; gap:8px;
+  transition:transform .15s ease, background .2s ease, color .2s ease;
+  cursor:pointer;
+}
+.btn-solid{ background:var(--orange); color:var(--charcoal); font-weight:700; }
+.btn-solid:hover{ background:var(--orange-2); border-color:var(--orange-2); transform:translateY(-2px); }
+.btn-outline{ color:var(--paper); }
+.btn-outline:hover{ background:var(--paper); color:var(--charcoal); transform:translateY(-2px); }
+
+.ticket{
+  background:var(--paper); color:var(--ink); border-radius:4px;
+  padding:22px 22px 18px; position:relative;
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+.ticket::before{
+  content:""; position:absolute; top:0; bottom:0; left:-2px; width:14px;
+  background-image:radial-gradient(circle at 7px 10px, var(--charcoal) 5px, transparent 5.5px);
+  background-size:14px 22px; background-repeat:repeat-y;
+}
+.ticket-row{
+  display:flex; justify-content:space-between; gap:10px;
+  font-family:var(--mono); font-size:.82rem; padding:7px 0;
+  border-bottom:1px dashed var(--steel);
+}
+.ticket-row:last-child{ border-bottom:none; }
+.ticket-label{ color:var(--ink-soft); text-transform:uppercase; letter-spacing:.05em; }
+.ticket-value{ font-weight:600; text-align:right; }
+.ticket-head{ font-family:var(--mono); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--orange); margin-bottom:10px; }
+
+.door-overlay{ position:absolute; inset:0; z-index:5; display:flex; flex-direction:column; pointer-events:none; }
+.door-slat{ flex:1; background:var(--charcoal-2); border-bottom:2px solid var(--charcoal); transform:translateY(0); animation:doorUp .9s cubic-bezier(.65,0,.35,1) forwards; }
+.door-slat:nth-child(1){ animation-delay:.05s; }
+.door-slat:nth-child(2){ animation-delay:.15s; }
+.door-slat:nth-child(3){ animation-delay:.25s; }
+.door-slat:nth-child(4){ animation-delay:.35s; }
+.door-slat:nth-child(5){ animation-delay:.45s; }
+@keyframes doorUp{ to{ transform:translateY(-100%); } }
+
+/* SECTIONS */
+.section{ padding:80px 0; }
+.section-tight{ padding:56px 0; }
+.section-dark{ background:var(--charcoal); color:var(--paper); }
+.section-dark h2{ color:var(--paper); }
+.section-dark p{ color:var(--chrome); }
+.section-head{ max-width:640px; margin-bottom:44px; }
+.section-head h2{ font-size:clamp(1.8rem,3.4vw,2.6rem); }
+
+.grid{ display:grid; gap:26px; }
+.grid-3{ grid-template-columns:repeat(3,1fr); }
+.grid-4{ grid-template-columns:repeat(4,1fr); }
+@media (max-width:900px){ .grid-3,.grid-4{ grid-template-columns:1fr 1fr; } }
+@media (max-width:600px){ .grid-3,.grid-4{ grid-template-columns:1fr; } }
+
+.card{
+  background:#fff; border:1px solid var(--paper-2); border-radius:6px; padding:26px;
+  transition:transform .25s ease, box-shadow .25s ease;
+  transform-style:preserve-3d; will-change:transform;
+}
+.card:hover{ box-shadow:0 18px 32px rgba(20,22,26,.14); }
+.card .num{ font-family:var(--mono); color:var(--orange); font-size:.8rem; letter-spacing:.1em; margin-bottom:10px; display:block; }
+.card h3{ font-size:1.15rem; margin-bottom:.4em; }
+.card p{ font-size:.95rem; margin-bottom:0; }
+
+.card-dark{ background:var(--charcoal-2); border:1px solid #33373D; }
+.card-dark h3{ color:var(--paper); }
+.card-dark p{ color:var(--chrome); }
+
+.gallery-tile{
+  aspect-ratio:4/3; border-radius:6px; position:relative; overflow:hidden;
+  background:linear-gradient(135deg,var(--steel),var(--charcoal));
+  display:flex; align-items:flex-end; border:1px solid var(--paper-2);
+}
+.gallery-tile img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  z-index:0; transition:transform .4s ease;
+}
+.gallery-tile:hover img{ transform:scale(1.05); }
+.gallery-tile span{
+  position:relative; z-index:1;
+  font-family:var(--mono); font-size:.75rem; letter-spacing:.06em; color:var(--chrome);
+  background:linear-gradient(to top, rgba(20,22,26,.85), rgba(20,22,26,0));
+  padding:26px 14px 12px; width:100%; text-transform:uppercase;
+}
+
+.testimonial{ background:#fff; border:1px solid var(--paper-2); border-radius:6px; padding:26px; }
+.stars{ color:var(--orange); letter-spacing:2px; margin-bottom:10px; font-size:1rem; }
+.testimonial p{ font-style:italic; color:var(--ink-soft); }
+.testimonial .who{ font-family:var(--mono); font-size:.78rem; color:var(--ink); text-transform:uppercase; letter-spacing:.05em; font-style:normal; }
+.placeholder-note{ font-family:var(--mono); font-size:.72rem; color:var(--orange-2); text-transform:uppercase; letter-spacing:.05em; margin-top:10px; }
+
+.cta-band{ background:var(--orange); color:var(--charcoal); padding:52px 0; }
+.cta-band h2{ color:var(--charcoal); margin-bottom:.2em; }
+.cta-band .btn-outline{ border-color:var(--charcoal); color:var(--charcoal); }
+.cta-band .btn-outline:hover{ background:var(--charcoal); color:var(--paper); }
+.cta-flex{ display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+
+.service-line{
+  display:grid; grid-template-columns:70px 1fr auto; gap:20px; align-items:center;
+  padding:22px 0; border-bottom:1px dashed var(--steel);
+}
+.service-line:first-child{ border-top:1px dashed var(--steel); }
+.service-line .tag{ font-family:var(--mono); color:var(--orange); font-size:.85rem; }
+.service-line h3{ margin:0 0 4px; font-size:1.1rem; }
+.service-line p{ margin:0; font-size:.92rem; }
+.service-line .status{ font-family:var(--mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); white-space:nowrap; }
+@media (max-width:640px){
+  .service-line{ grid-template-columns:50px 1fr; }
+  .service-line .status{ display:none; }
+}
+
+.info-block{ display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--paper-2); }
+.info-block:last-child{ border-bottom:none; }
+.info-icon{ font-family:var(--mono); color:var(--orange); font-weight:700; width:26px; flex-shrink:0; }
+.info-block h4{ margin:0 0 3px; font-size:.95rem; }
+.info-block p{ margin:0; font-size:.92rem; }
+
+form{ display:grid; gap:16px; }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media (max-width:640px){ .form-row{ grid-template-columns:1fr; } }
+label{ font-family:var(--mono); font-size:.75rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); display:block; margin-bottom:6px; }
+input, textarea, select{
+  width:100%; padding:12px 14px; border:1px solid var(--steel); border-radius:4px;
+  font-family:var(--body); font-size:.95rem; background:#fff; color:var(--ink);
+}
+textarea{ min-height:130px; resize:vertical; }
+.form-note{ font-size:.82rem; color:var(--ink-soft); }
+.form-success{ display:none; background:#EAF4EC; border:1px solid #B7DABE; color:#2A5C33; padding:14px 16px; border-radius:4px; font-size:.92rem; }
+.form-success.show{ display:block; }
+
+.map-wrap{ border:1px solid var(--paper-2); border-radius:6px; overflow:hidden; height:100%; min-height:320px; }
+.map-wrap iframe{ width:100%; height:100%; border:0; display:block; min-height:320px; }
+
+footer{ background:var(--charcoal); color:var(--chrome); padding:52px 0 26px; }
+.footer-grid{ display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:36px; margin-bottom:34px; }
+@media (max-width:760px){ .footer-grid{ grid-template-columns:1fr; } }
+footer h4{ color:var(--paper); font-size:.95rem; margin-bottom:14px; }
+footer a{ color:var(--chrome); }
+footer a:hover{ color:var(--orange); }
+.footer-links{ list-style:none; margin:0; padding:0; display:grid; gap:8px; font-size:.9rem; }
+.footer-bottom{
+  border-top:1px solid var(--charcoal-2); padding-top:20px;
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  font-family:var(--mono); font-size:.75rem; color:var(--steel);
+}
+
+.page-hero{ background:var(--charcoal); color:var(--paper); padding:56px 0 44px; }
+.page-hero h1{ color:var(--paper); font-size:clamp(2rem,4vw,3rem); }
+.page-hero p{ color:var(--chrome); max-width:60ch; }
+
+.two-col{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+@media (max-width:860px){ .two-col{ grid-template-columns:1fr; } }
+
+section[id]{ scroll-margin-top:72px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="#home" class="brand">Ed's Total Auto<span>Solutions &mdash; Brockton, MA</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:5085870709" class="nav-cta">(508) 587-0709</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ============ HOME ============ -->
+<section id="home" class="hero">
+  <div class="door-overlay" aria-hidden="true">
+    <div class="door-slat"></div>
+    <div class="door-slat"></div>
+    <div class="door-slat"></div>
+    <div class="door-slat"></div>
+    <div class="door-slat"></div>
+  </div>
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">Brockton, MA &middot; Auto Body Shop</p>
+      <h1>Straighter panels.<br>Cleaner paint.<br><em>Total</em> solutions.</h1>
+      <p class="hero-sub">Collision repair, refinishing, and general auto work done right the first time &mdash; with a clear estimate before we ever pick up a tool.</p>
+      <div class="hero-cta-row">
+        <a href="tel:5085870709" class="btn btn-solid">Call (508) 587-0709</a>
+        <a href="#contact" class="btn btn-outline">Get a free estimate</a>
+      </div>
+    </div>
+    <div class="ticket">
+      <p class="ticket-head">Work Order &mdash; Shop Info</p>
+      <div class="ticket-row"><span class="ticket-label">Shop</span><span class="ticket-value">Ed's Total Auto Solutions</span></div>
+      <div class="ticket-row"><span class="ticket-label">Address</span><span class="ticket-value">347 N Montello St,<br>Brockton, MA 02301</span></div>
+      <div class="ticket-row"><span class="ticket-label">Phone</span><span class="ticket-value">(508) 587-0709</span></div>
+      <div class="ticket-row"><span class="ticket-label">Today</span><span class="ticket-value">Open &middot; closes 5 PM</span></div>
+      <div class="ticket-row"><span class="ticket-label">Type</span><span class="ticket-value">Auto Body Shop</span></div>
+    </div>
+  </div>
+</section>
+<div class="stripe" role="presentation"></div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What we do</p>
+      <h2>Body work, paint, and the mechanical stuff in between</h2>
+      <p>Every job starts with a written estimate, so there are no surprises when you pick up your keys.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card"><span class="num">01</span><h3>Collision Repair</h3><p>Frame-straight panel work after an accident, big or small.</p></div>
+      <div class="card"><span class="num">02</span><h3>Paint &amp; Refinishing</h3><p>Color-matched spray work with a clean, even finish.</p></div>
+      <div class="card"><span class="num">03</span><h3>Dent &amp; Scratch Repair</h3><p>Door dings, key scratches, and bumper scuffs, fixed.</p></div>
+      <div class="card"><span class="num">04</span><h3>General Auto Repair</h3><p>Diagnostics and mechanical repair beyond the body shop.</p></div>
+    </div>
+    <div style="margin-top:30px;">
+      <a href="#services" class="btn btn-outline" style="border-color:var(--steel); color:var(--charcoal);">See all services</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight section-dark">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The work we do</p>
+      <h2>A look at what happens on the shop floor</h2>
+      <p>Swap these for real photos of your own finished jobs whenever you're ready &mdash; these are stand-ins for now.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="gallery-tile">
+        <img src="https://images.pexels.com/photos/12365608/pexels-photo-12365608.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Close-up front view of a car's grille and bumper" loading="lazy">
+        <span>Collision &amp; Panel Repair</span>
+      </div>
+      <div class="gallery-tile">
+        <img src="https://images.pexels.com/photos/20706248/pexels-photo-20706248.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Glossy finished car paint reflecting its surroundings" loading="lazy">
+        <span>Paint &amp; Refinishing</span>
+      </div>
+      <div class="gallery-tile">
+        <img src="https://images.pexels.com/photos/3930091/pexels-photo-3930091.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hand tools laid out on a workbench" loading="lazy">
+        <span>Dent &amp; Scratch Repair</span>
+      </div>
+      <div class="gallery-tile">
+        <img src="https://images.pexels.com/photos/1409999/pexels-photo-1409999.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Close-up of an exposed car engine bay during maintenance" loading="lazy">
+        <span>General Auto Repair</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Customer feedback</p>
+      <h2>What customers say</h2>
+      <p>Placeholder quotes &mdash; replace with real customer reviews once you've collected a few.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="testimonial"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Placeholder testimonial &mdash; add a real customer quote here about the quality of the repair work."</p><p class="who">&mdash; Customer name, City</p></div>
+      <div class="testimonial"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Placeholder testimonial &mdash; add a real customer quote here about turnaround time or communication."</p><p class="who">&mdash; Customer name, City</p></div>
+      <div class="testimonial"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Placeholder testimonial &mdash; add a real customer quote here about the price or the estimate process."</p><p class="who">&mdash; Customer name, City</p></div>
+    </div>
+    <p class="placeholder-note">Swap in real reviews when ready &mdash; ask a few recent customers for a quote and a star rating.</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="page-hero">
+  <div class="container">
+    <p class="eyebrow">About the shop</p>
+    <h1>A straight answer before the wrench ever comes out</h1>
+    <p>Ed's Total Auto Solutions is an auto body shop on N Montello St in Brockton, handling collision repair, paint, and general auto work for the local area.</p>
+  </div>
+</section>
+<div class="stripe" role="presentation"></div>
+
+<section class="section-tight section-dark">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What matters here</p>
+      <h2>Three things we hold ourselves to</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card card-dark"><span class="num">01</span><h3>Clear estimates</h3><p>Written pricing before work starts, so there's no guessing about the final bill.</p></div>
+      <div class="card card-dark"><span class="num">02</span><h3>Real diagnostics</h3><p>Problems get identified properly instead of guessed at, so repairs address the actual issue.</p></div>
+      <div class="card card-dark"><span class="num">03</span><h3>Careful handling</h3><p>Your car leaves in the same condition it came in, aside from the repair itself.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Work order &mdash; full list</p>
+    <h1>Everything on the shop menu</h1>
+    <p>From full collision repair to a single mirror replacement &mdash; here's what we handle, itemized like a real work order.</p>
+  </div>
+</section>
+<div class="stripe" role="presentation"></div>
+
+<section class="section">
+  <div class="container">
+    <div class="service-line"><span class="tag">01</span><div><h3>Collision Repair</h3><p>Panel straightening, frame work, and full reassembly after an accident.</p></div><span class="status">Estimate required</span></div>
+    <div class="service-line"><span class="tag">02</span><div><h3>Auto Painting &amp; Refinishing</h3><p>Color-matched spray work, from single-panel touch-ups to full resprays.</p></div><span class="status">Estimate required</span></div>
+    <div class="service-line"><span class="tag">03</span><div><h3>Dent &amp; Scratch Repair</h3><p>Door dings, bumper scuffs, and key scratches, repaired and blended in.</p></div><span class="status">Same-week booking</span></div>
+    <div class="service-line"><span class="tag">04</span><div><h3>Mirror &amp; Glass Replacement</h3><p>Side mirrors, windshields, and window glass, installed and sealed properly.</p></div><span class="status">Same-week booking</span></div>
+    <div class="service-line"><span class="tag">05</span><div><h3>Diagnostics</h3><p>Proper diagnostic work to identify the actual issue before any repair is quoted.</p></div><span class="status">Fee applies</span></div>
+    <div class="service-line"><span class="tag">06</span><div><h3>General Auto Repair</h3><p>Mechanical and electrical repairs beyond the body shop, from ignition issues to routine fixes.</p></div><span class="status">Estimate required</span></div>
+  </div>
+</section>
+
+<section class="section-tight section-dark">
+  <div class="container two-col">
+    <div>
+      <p class="eyebrow">Before you book</p>
+      <h2>How an estimate works here</h2>
+      <p style="color:var(--chrome);">Bring the vehicle in, or call ahead with the details. We look it over, walk through what needs doing, and give you a written price before any work starts. Diagnostic work carries its own fee, which gets explained upfront &mdash; not buried in the final invoice.</p>
+    </div>
+    <div class="ticket">
+      <p class="ticket-head">Work Order &mdash; Next Steps</p>
+      <div class="ticket-row"><span class="ticket-label">Step 1</span><span class="ticket-value">Call or submit contact form</span></div>
+      <div class="ticket-row"><span class="ticket-label">Step 2</span><span class="ticket-value">Bring vehicle in for look-over</span></div>
+      <div class="ticket-row"><span class="ticket-label">Step 3</span><span class="ticket-value">Receive written estimate</span></div>
+      <div class="ticket-row"><span class="ticket-label">Step 4</span><span class="ticket-value">Approve &amp; schedule repair</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-flex">
+    <div>
+      <h2>Have a job in mind?</h2>
+      <p style="color:var(--charcoal);">Tell us what's going on with the vehicle and we'll get back to you with next steps.</p>
+    </div>
+    <div class="hero-cta-row" style="margin-top:0;">
+      <a href="tel:5085870709" class="btn btn-solid" style="background:var(--charcoal); color:var(--paper); border-color:var(--charcoal);">Call (508) 587-0709</a>
+      <a href="#contact" class="btn btn-outline">Contact form</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<div class="stripe" role="presentation"></div>
+<section id="contact" class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Get in touch</p>
+    <h1>Tell us what's going on with the car</h1>
+    <p>Call directly for the fastest response, or send the details below and we'll follow up.</p>
+  </div>
+</section>
+<div class="stripe" role="presentation"></div>
+
+<section class="section">
+  <div class="container two-col">
+    <div>
+      <p class="eyebrow">Send a message</p>
+      <h2>Request an estimate</h2>
+      <div id="form-success" class="form-success">Thanks &mdash; your message has been noted. We'll follow up shortly. <em>(Note: this form is a front-end demo. Connect it to an email service or backend to receive real submissions.)</em></div>
+      <form id="contact-form">
+        <div class="form-row">
+          <div><label for="name">Full name</label><input type="text" id="name" name="name" required></div>
+          <div><label for="phone">Phone number</label><input type="tel" id="phone" name="phone" required></div>
+        </div>
+        <div class="form-row">
+          <div><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+          <div>
+            <label for="service">Service needed</label>
+            <select id="service" name="service">
+              <option>Collision repair</option>
+              <option>Paint &amp; refinishing</option>
+              <option>Dent &amp; scratch repair</option>
+              <option>Mirror &amp; glass replacement</option>
+              <option>Diagnostics</option>
+              <option>General auto repair</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="message">Tell us about the vehicle &amp; issue</label>
+          <textarea id="message" name="message" placeholder="Year, make, model, and what happened..." required></textarea>
+        </div>
+        <div><button type="submit" class="btn btn-solid">Send message</button></div>
+        <p class="form-note">We typically respond within one business day. For anything urgent, please call the shop directly.</p>
+      </form>
+    </div>
+
+    <div>
+      <p class="eyebrow">Shop info</p>
+      <h2>Visit or call</h2>
+      <div class="info-block"><span class="info-icon">&#9679;</span><div><h4>Address</h4><p>347 N Montello St, Brockton, MA 02301</p></div></div>
+      <div class="info-block"><span class="info-icon">&#9679;</span><div><h4>Phone</h4><p><a href="tel:5085870709">(508) 587-0709</a></p></div></div>
+      <div class="info-block"><span class="info-icon">&#9679;</span><div><h4>Hours</h4><p>Open today &middot; closes 5 PM. Call ahead to confirm hours for other days.</p></div></div>
+      <div class="info-block"><span class="info-icon">&#9679;</span><div><h4>Type</h4><p>Auto body shop</p></div></div>
+      <div class="map-wrap" style="margin-top:20px;">
+        <iframe
+          title="Map to Ed's Total Auto Solutions, 347 N Montello St, Brockton, MA"
+          src="https://www.google.com/maps?q=347+N+Montello+St,+Brockton,+MA+02301&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe" role="presentation"></div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Ed's Total Auto Solutions</h4>
+        <p style="color:var(--chrome); font-size:.92rem;">Auto body shop serving Brockton, MA and the surrounding area &mdash; collision repair, paint, and general auto work.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul class="footer-links">
+          <li>347 N Montello St, Brockton, MA 02301</li>
+          <li><a href="tel:5085870709">(508) 587-0709</a></li>
+          <li>Open today &middot; closes 5 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="js-year">2026</span> Ed's Total Auto Solutions.</span>
+      <span>347 N Montello St, Brockton, MA 02301</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  }
+
+  const overlay = document.querySelector('.door-overlay');
+  if (overlay) window.setTimeout(() => overlay.remove(), 1200);
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced) {
+    document.querySelectorAll('.card, .gallery-tile').forEach((card) => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `perspective(600px) rotateX(${y * -6}deg) rotateY(${x * 6}deg) translateY(-2px)`;
+      });
+      card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    });
+  }
+
+  const form = document.querySelector('#contact-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const success = document.querySelector('#form-success');
+      if (success) { success.classList.add('show'); success.setAttribute('role', 'status'); }
+      form.reset();
+    });
+  }
+
+  document.querySelectorAll('.js-year').forEach((el) => { el.textContent = new Date().getFullYear(); });
+
+  // Highlight active nav link based on scroll position
+  const sections = ['home','about','services','contact'].map(id => document.getElementById(id)).filter(Boolean);
+  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  const setActive = () => {
+    let current = sections[0]?.id;
+    sections.forEach(sec => { if (window.scrollY + 100 >= sec.offsetTop) current = sec.id; });
+    navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  };
+  window.addEventListener('scroll', setActive);
+  setActive();
+});
+</script>
+</body>
+</html>
